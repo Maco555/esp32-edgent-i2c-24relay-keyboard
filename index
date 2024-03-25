@@ -36,7 +36,7 @@ char keys[ROW_NUM][COLUMN_NUM] = {
 
 // For ESP32 Microcontroller
 byte pin_rows[ROW_NUM] = {19, 18, 5, 17}; 
-byte pin_column[COLUMN_NUM] = {16, 4, 0, 2};
+byte pin_column[COLUMN_NUM] = {2, 0, 4, 16};
 
 Keypad keypad = Keypad( makeKeymap(keys), pin_rows, pin_column, ROW_NUM, COLUMN_NUM );
 #include <Wire.h>
