@@ -1,4 +1,4 @@
-#define BLYNK_TEMPLATE_ID ""
+#define BLYNK_TEMPLATE_ID "TMPLSPy5qmjk"
 #define BLYNK_TEMPLATE_NAME "I2C"
 
 #define BLYNK_FIRMWARE_VERSION        "0.1.0"
@@ -10,9 +10,9 @@
 
 // Uncomment your board, or configure a custom board in Settings.h
 //#define USE_SPARKFUN_BLYNK_BOARD
-#define USE_NODE_MCU_BOARD
+//#define USE_ESP32S2_DEV_KIT
 //#define USE_WITTY_CLOUD_BOARD
-//#define USE_WEMOS_D1_MINI
+#define USE_WROVER_BOARD
 
 #include "BlynkEdgent.h"
 #include "Keypad.h"
@@ -62,9 +62,30 @@ unsigned char i2c_buffer;
 unsigned char i2c_buffer_1;   // i2c relay variable buffer for #1 relay board
 unsigned char i2c_buffer_2;   // i2c relay variable buffer for #2 relay board
 unsigned char i2c_buffer_3;   // i2c relay variable buffer for #3 relay board
-const String password_1 = "1204"; // change your password here
-const String password_2 = "1A35";  // change your password here
+const String password_1 = "1D04"; // change your password here
+const String password_2 = "2D35";  // change your password here
 const String password_3 = "2C56";   // change your password here
+const String password_4 = "1304"; // change your password here
+const String password_5 = "1B35";  // change your password here
+const String password_6 = "3C56";   // change your password here
+const String password_7 = "1884"; // change your password here
+const String password_8 = "1535";  // change your password here
+const String password_9 = "2A54";   // change your password here
+const String password_10 = "9304"; // change your password here
+const String password_11 = "1B15";  // change your password here
+const String password_12 = "3CA6";   // change your password here
+const String password_13 = "3204"; // change your password here
+const String password_14 = "1C35";  // change your password here
+const String password_15 = "2656";   // change your password here
+const String password_16 = "1354"; // change your password here
+const String password_17 = "1B99";  // change your password here
+const String password_18 = "3C14";   // change your password here
+const String password_19 = "1287"; // change your password here
+const String password_20 = "1A69";  // change your password here
+const String password_21 = "2C89";   // change your password here
+const String password_22 = "1344"; // change your password here
+const String password_23 = "1B75";  // change your password here
+const String password_24 = "3C86";   // change your password here
 String input_password;
 void setup()
 {
@@ -73,6 +94,7 @@ void setup()
   Wire.begin(); 
   input_password.reserve(32); // maximum password size is 32, change if needed
   BlynkEdgent.begin();
+  
 }
 
 void loop() {
@@ -89,6 +111,7 @@ void loop() {
         channel_mode(BOARD_1,1,ON);
         delay(1000);
         channel_mode(BOARD_1,1,OFF);
+               
       } 
       else if (input_password == password_2 )
       {
@@ -96,13 +119,164 @@ void loop() {
         channel_mode(BOARD_1,2,ON);
         delay(1000);
         channel_mode(BOARD_1,2,OFF);
+        
+        
       } 
       else if (input_password == password_3 )
       {
         Serial.println("The password is correct, turning ON relay 3");
+        channel_mode(BOARD_1,3,ON);
+        delay(1000);
+        channel_mode(BOARD_1,3,OFF);
+      } 
+      else if (input_password == password_4 )
+      {
+        Serial.println("The password is correct, turning ON relay 4");
+        channel_mode(BOARD_1,4,ON);
+        delay(1000);
+        channel_mode(BOARD_1,4,OFF);
+      } 
+      else if (input_password == password_5 )
+      {
+        Serial.println("The password is correct, turning ON relay 5");
+        channel_mode(BOARD_1,5,ON);
+        delay(1000);
+        channel_mode(BOARD_1,5,OFF);
+      } 
+      else if (input_password == password_6 )
+      {
+        Serial.println("The password is correct, turning ON relay 6");
+        channel_mode(BOARD_1,6,ON);
+        delay(1000);
+        channel_mode(BOARD_1,6,OFF);
+      }
+      else if (input_password == password_7 ) {
+        Serial.println("The password is correct, turning ON relay 7");
+        channel_mode(BOARD_1,7,ON);
+        delay(1000);
+        channel_mode(BOARD_1,7,OFF);
+               
+      } 
+      else if (input_password == password_8 )
+      {
+        Serial.println("The password is correct, turning ON relay 8");
+        channel_mode(BOARD_1,8,ON);
+        delay(1000);
+        channel_mode(BOARD_1,8,OFF);
+        
+        
+      } 
+      else if (input_password == password_9 )
+      {
+        Serial.println("The password is correct, turning ON relay 9");
+        channel_mode(BOARD_2,1,ON);
+        delay(1000);
+        channel_mode(BOARD_2,1,OFF);
+      } 
+      else if (input_password == password_10 )
+      {
+        Serial.println("The password is correct, turning ON relay 10");
         channel_mode(BOARD_2,2,ON);
         delay(1000);
         channel_mode(BOARD_2,2,OFF);
+      } 
+      else if (input_password == password_11 )
+      {
+        Serial.println("The password is correct, turning ON relay 11");
+        channel_mode(BOARD_2,3,ON);
+        delay(1000);
+        channel_mode(BOARD_2,3,OFF);
+      } 
+      else if (input_password == password_12 )
+      {
+        Serial.println("The password is correct, turning ON relay 12");
+        channel_mode(BOARD_2,4,ON);
+        delay(1000);
+        channel_mode(BOARD_2,4,OFF);
+      } 
+      else if (input_password == password_13 )
+      {
+        Serial.println("The password is correct, turning ON relay 13");
+        channel_mode(BOARD_2,5,ON);
+        delay(1000);
+        channel_mode(BOARD_2,5,OFF);
+      } 
+      else if (input_password == password_14 )
+      {
+        Serial.println("The password is correct, turning ON relay 14");
+        channel_mode(BOARD_2,6,ON);
+        delay(1000);
+        channel_mode(BOARD_2,6,OFF);
+      } 
+      else if (input_password == password_15 )
+      {
+        Serial.println("The password is correct, turning ON relay 15");
+        channel_mode(BOARD_2,7,ON);
+        delay(1000);
+        channel_mode(BOARD_2,7,OFF);
+      }
+      else if (input_password == password_16 )
+      {
+        Serial.println("The password is correct, turning ON relay 16");
+        channel_mode(BOARD_2,8,ON);
+        delay(1000);
+        channel_mode(BOARD_2,8,OFF);
+      } 
+      else if (input_password == password_17 )
+      {
+        Serial.println("The password is correct, turning ON relay 17");
+        channel_mode(BOARD_3,1,ON);
+        delay(1000);
+        channel_mode(BOARD_3,1,OFF);
+      } 
+      else if (input_password == password_18 )
+      {
+        Serial.println("The password is correct, turning ON relay 18");
+        channel_mode(BOARD_3,2,ON);
+        delay(1000);
+        channel_mode(BOARD_3,2,OFF);
+      }  
+      else if (input_password == password_19 )
+      {
+        Serial.println("The password is correct, turning ON relay 19");
+        channel_mode(BOARD_3,3,ON);
+        delay(1000);
+        channel_mode(BOARD_3,3,OFF);
+      } 
+      else if (input_password == password_20 )
+      {
+        Serial.println("The password is correct, turning ON relay 20");
+        channel_mode(BOARD_3,4,ON);
+        delay(1000);
+        channel_mode(BOARD_3,4,OFF);
+      } 
+      else if (input_password == password_21 )
+      {
+        Serial.println("The password is correct, turning ON relay 21");
+        channel_mode(BOARD_3,5,ON);
+        delay(1000);
+        channel_mode(BOARD_3,5,OFF);
+      } 
+      else if (input_password == password_22 )
+      {
+        Serial.println("The password is correct, turning ON relay 22");
+        channel_mode(BOARD_3,6,ON);
+        delay(1000);
+        channel_mode(BOARD_3,6,OFF);
+      } 
+      else if (input_password == password_23 )
+      {
+        Serial.println("The password is correct, turning ON relay 23");
+        channel_mode(BOARD_3,7,ON);
+        delay(1000);
+        channel_mode(BOARD_3,7,OFF);
+      } 
+      else if (input_password == password_24 )
+      {
+        Serial.println("The password is correct, turning ON relay 24");
+        channel_mode(BOARD_3,8,ON);
+        delay(1000);
+        channel_mode(BOARD_3,8,OFF);
       } 
       
       
@@ -110,6 +284,7 @@ void loop() {
       
       else {
         Serial.println("The password is incorrect, try again");
+                
       }
 
       input_password = ""; // reset the input password
